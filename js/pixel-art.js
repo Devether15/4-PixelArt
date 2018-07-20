@@ -138,7 +138,7 @@ cargarBatman.addEventListener("click", cargandoSuper);
 
 function cargandoSuper(e){
 
-    console.log("cargando");
+    //console.log("cargando");
 
 };
  
