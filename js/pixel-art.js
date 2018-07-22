@@ -10,6 +10,7 @@ var cargarBatman = document.getElementById('batman');
 var cargarWonder = document.getElementById('wonder');
 var cargarFlash = document.getElementById('flash');
 var cargarInvisible = document.getElementById('invisible');
+var guardarTrabajo =  document.getElementById('guardar');
 
 
 
@@ -125,20 +126,68 @@ borrando.addEventListener("click", borarTodo);
 
 function borarTodo(e){
     console.log("borrando")
-    grillaPixel.style.backgroundColor = white;
-   
-
+    var $grillaCompleta = $("#grilla-pixeles div");
+    $grillaCompleta.css({"backgroundColor": "white"});
+    // $grillaCompleta.fadeOut(1500);
 };
 
-//paso 2 guía 3
-cargarBatman.addEventListener("click", cargandoSuper);
-// cargarWonder.addEventListener("click", cargandoSuper);
-// cargarFlash.addEventListener("click", cargandoSuper);
-// cargarInvisible.addEventListener("click", cargandoSuper);
+//paso 2 guía 3: Vargar superheroes
 
-function cargandoSuper(e){
-
-    //console.log("cargando");
-
+//llamando a batman
+cargarBatman.addEventListener("click", cargandoBatman);
+function cargandoBatman(e){
+    $grillaCompleta = cargarSuperheroe(batman);
 };
+
+//llamando a wonder
+cargarWonder.addEventListener("click", cargandoWonder);
+function cargandoWonder(e){
+    $grillaCompleta = cargarSuperheroe(wonder);
+};
+
+//llamando a flash
+cargarFlash.addEventListener("click", cargandoFlash);
+function cargandoFlash(e){
+    $grillaCompleta = cargarSuperheroe(flash);
+};
+
+//llamando a invisible
+cargarInvisible.addEventListener("click", cargandoInvisible);
+function cargandoInvisible(e){
+    $grillaCompleta = cargarSuperheroe(invisible);
+};
+
+//intenté hacerlo con un switch pero no me salió
+
+// function cargandoSuper(){
+// var cargarCaso = $grillaCompleta = cargarSuperheroe();
+//     switch (cargarCaso){
+//         case 1:
+//         cargarCaso();
+//         console.log("cargando batman");
+        
+//             break;
+//         case 2:
+//         console.log("cargando wonder");
+//             //cargarSuperheroe(wonder);
+//             break;
+//         case 3:
+//         console.log("cargando flash");
+//            // cargarSuperheroe(flash);
+//             break;
+//         case 4:
+//         console.log("cargando invisible");
+//             //cargarSuperheroe(invisible);
+//             break;
+//         default:
+//     }
+
+//paso 3 guia 3: guardar
+guardarTrabajo.addEventListener("click", guardando);
+function guardando(e){
+    guardarTrabajo = guardarPixelArt();
+};
+
+
+
  
